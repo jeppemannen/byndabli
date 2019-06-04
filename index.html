@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+
+        <link rel="stylesheet" href="style.css">
+     
+        <title>Tror...</title>
+    </head>
+
+    <body>
+
+       <div id="overlay"></div>
+       <!--New task modal-- end -->  
+
+    <header class="menu-bar">
+        <h1>NimaBan</h1>
+    </header>
+    <main>
+
+
+
+        <div class="lists">
+
+        <div class="options" id="options">
+            
+            <div class="options-header">
+                <div class="options-title">Add new task</div>
+                <button data-close-button class="close-options">&times;</button>
+            </div>
+            
+            <div class="options-body">
+
+                <form id="taskDetails">
+                    <label>Task title</label> <br>
+                    <input id="inpTitle" type="text" placeholder="Title here.." maxlength="30"> <br>
+                    
+                    
+                    <select id="inpPrio" name="priority">
+                            <option value="" disabled selected>Choose priority</option>
+                            <option value="! (Low priority)">!</option>
+                            <option value="!! - (Medium priority)">!!</option>
+                            <option value="!!! - (High priority)">!!!</option>
+                            <option value="!!!! - Very high priority">!!!!</option>
+                    </select> <br>
+                    
+                    <label >Add description</label>
+                    <textarea id="inpDesc" rows="10" cols="60"></textarea>
+                    
+                    <input type="date" id="inpDate">
+
+                    <input data-close-button class="close-options" type="button" id="saveBtn" value="Save"></input>
+
+                </form>
+            
+            </div>
+            
+        </div>
+        
+        <div id="overlay"></div>
+
+
+
+        <section class="column list">
+            <header>
+                <h3>To do</h3>
+  
+
+                <button data-options-target="#options" id="newTaskBtn">New task</button>
+
+            </header>
+
+
+            <div id="sortable1" class="list-body">
+
+            </div>
+        </section>
+
+        <section class="column list">
+            <header>
+            <h3>Doing</h3>
+            </header>
+            <div id="sortable2" class="list-body"></div>
+        </section>
+
+        <section class="column list">
+            <header>
+            <h3>Done</h3>
+            </header>
+            <div id="sortable3" class="list-body"></div>
+        </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+            
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="test.js"></script>
+    </body>
+</html>
